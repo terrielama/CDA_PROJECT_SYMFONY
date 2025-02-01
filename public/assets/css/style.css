@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Fond gris clair */
+  color: #212529; /* Couleur principale du texte */
+}
+
+/* Conteneur global */
+.container {
+  padding: 2rem;
+}
+
+/* Titres */
+h1 {
+  font-size: 2.5rem;
+  color: #343a40; /* Texte gris foncé */
+  text-align: center;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #6c757d; /* Texte gris clair */
+  text-align: center;
+}
+
+/* ------------------------------------ */
+/* Barre de navigation */
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #d2d2d2;
+  position: static;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+/* Titre/Logo à gauche*/
+.navbar-brand {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff1c1c;
+  border-color: 1px solid #000000;
+  position: fixed;
+  left: 25px;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0 1rem;
+}
+
+.nav-link {
+  color: #212529;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ------------------Menu déroulant ------------------------------------*/
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block; /* Affiche le menu au survol */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0;
+  min-width: 160px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  border: 1px solid #c2c2c2;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  color: #212529;
+  display: block;
+  font-size: 18px;
+}
+
+.dropdown-item:hover {
+  font-weight: bold;
+}
+
+/* -------------------------------Icônes à droite----------------------------- */
+
+.navbar-icons {
+  display: flex;
+  position: fixed;
+  right: 35px;
+  top: 30px;
+  margin: 10px;
+}
+
+img {
+  width: 25px;
+}
+
+/* ------------------------------------ */
+/* Bouton toggler (pour mobiles) */
+.navbar-toggler {
+  display: none; /* Masqué par défaut */
+}
+
+/* ------------------------------------ */
+/* Responsive design */
+@media (max-width: 768px) {
+}

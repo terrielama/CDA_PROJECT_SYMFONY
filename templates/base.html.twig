@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Skate Paradise{% endblock %}</title>
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+</head>
+    <body>
+        <!-- Barre de navigation -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <!-- Brand à gauche -->
+            <a class="navbar-brand" href="{{path('home') }}">Skate Paradise</a>
+
+            <!-- Catégories centrées -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Skateboard
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <li><a class="dropdown-item" href="#">Planche de skate</a></li>
+                        <li><a class="dropdown-item" href="#">Roues</a></li>
+                        <li><a class="dropdown-item" href="#">Grips</a></li>
+                        <li><a class="dropdown-item" href="#">Trucks</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Vêtements
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <li><a class="dropdown-item" href="#">Sweat shirts</a></li>
+                        <li><a class="dropdown-item" href="#">Jeans</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Chaussures</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Accessoires
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                        <li><a class="dropdown-item" href="#">Bonnets</a></li>
+                        <li><a class="dropdown-item" href="#">Ceintures</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Icônes à droite -->
+            <ul class="navbar-icons">
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                    <img src="{{ asset('./assets/img/icon/search.svg') }}" alt="Recherche" class="icon">
+
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                    <img src="{{ asset('./assets/img/icon/shopping.svg') }}" alt="Shopping" class="icon">
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{path('login') }}">
+                    <img src="{{ asset('./assets/img/icon/user.svg') }}" alt="User" class="icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        {% block body %}{% endblock %}
+    </body>
+</html>
